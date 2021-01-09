@@ -1,4 +1,6 @@
-const ADD_TODO = 'ADD_TODO';
+export const ADD_TODO = 'ADD_TODO';
+export const TODO_LIST_REQUEST = 'TODO_LIST_REQUEST';
+export const TODO_LIST_SUCCESS = 'TODO_LIST_SUCCESS';
 
 let addToDo = title => {
 	return {
@@ -10,4 +12,10 @@ let addToDo = title => {
 	};
 };
 
-export { ADD_TODO, addToDo };
+let toDoListRequest = () => {
+	return {
+		type: TODO_LIST_REQUEST,
+	};
+};
+
+export { addToDo, toDoListRequest };
