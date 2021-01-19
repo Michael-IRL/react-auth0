@@ -3,8 +3,6 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { signIn, signOut } from '../Auth';
-
 const NavigationBar = styled.div`
 	margin-bottom: 15px;
 	background-color: lightgray;
@@ -32,7 +30,7 @@ const UserLoggedIn = ({ user, signOut }) => {
 	);
 };
 
-const Navigation = ({ user }) => {
+const Navigation = ({ user, signIn, signOut }) => {
 	return (
 		<NavigationBar>
 			<Link className='btn btn-primary' to='/'>
