@@ -5,7 +5,10 @@ export const TODO_LIST_SUCCESS = 'TODO_LIST_SUCCESS';
 export const USER_PROFILE_LOADED = 'USER_PROFILE_LOADED';
 export const HANDLE_AUTHENTICATION_CALLBACK = 'HANDLE_AUTHENTICATION_CALLBACK';
 
-let addToDo = title => {
+export const USER_LOG_IN = 'USER_LOG_IN';
+export const USER_LOG_OUT = 'USER_LOG_OUT';
+
+const addToDo = title => {
 	return {
 		type: ADD_TODO,
 		toDoItem: {
@@ -15,16 +18,28 @@ let addToDo = title => {
 	};
 };
 
-let toDoListRequest = () => {
+const toDoListRequest = () => {
 	return {
 		type: TODO_LIST_REQUEST,
 	};
 };
 
-let handleAuthenticationCallback = () => {
+const handleAuthenticationCallback = () => {
 	return {
 		type: HANDLE_AUTHENTICATION_CALLBACK,
 	};
 };
 
-export { addToDo, toDoListRequest, handleAuthenticationCallback };
+const userLogIn = () => {
+	return {
+		type: USER_LOG_IN,
+	};
+};
+
+const userLogOut = () => {
+	return {
+		type: USER_LOG_OUT,
+	};
+};
+
+export { addToDo, toDoListRequest, handleAuthenticationCallback, userLogIn, userLogOut };

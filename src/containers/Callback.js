@@ -4,7 +4,7 @@ import { Redirect } from 'react-router';
 import { handleAuthenticationCallback } from '../actions';
 
 let Callback = () => {
-	const { user } = useSelector(state => state);
+	const user = useSelector(state => state.user);
 	const dispatch = useDispatch();
 
 	if (user) return <Redirect to='/' />;
